@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_login_login/Widget/ButtonWidget.dart';
 import 'package:flutter_login_login/Widget/TextFormWidget.dart';
 import '../kConst.dart';
+import 'SignUpScreen.dart';
 
 class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,16 +36,23 @@ class LoginScreen extends StatelessWidget {
               child: ButtonWidget(text: 'LOGIN'),
             ),
             Container(
-             alignment: Alignment.bottomCenter,
-                height: 150,
+              alignment: Alignment.bottomCenter,
+              height: 150,
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SignUpScreen(),
+                    ),
+                  );
+                },
                 child: Text(
-              'Create new account',
-              style: TextStyle(
-                color: Color(0xFFEEB702),
-                fontWeight: FontWeight.bold,
-                decoration: TextDecoration.underline
+                  'Create new account',
+                  style: yellowText,
+                ),
               ),
-            ))
+            ),
           ],
         ),
       ),

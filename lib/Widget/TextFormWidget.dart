@@ -9,7 +9,8 @@ class TextFormWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return
+      Container(
       margin: EdgeInsets.all(15),
       padding: EdgeInsets.symmetric(horizontal: 15),
       decoration: BoxDecoration(
